@@ -1,2 +1,4 @@
-var app = angular.module('inventory', []);
+var app = angular.module('inventory', [
+    'ngRoute'
+]);
 
