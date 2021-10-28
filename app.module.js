@@ -1,5 +1,11 @@
 var app = angular.module('inventory', [
-    'ngRoute',
-    'HomeModule'
-]);
+        'ngRoute'
+    ])
+    .config(['$locationProvider', function($locationProvider) {
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
+        $locationProvider.hashPrefix("");
+    }]);
 

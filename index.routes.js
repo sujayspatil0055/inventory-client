@@ -4,9 +4,10 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: './src/home/home.html',
         controller: 'HomeController'
     })
-    .when('login', {
+    .when('/login', {
         templateUrl: './src/login/login.html',
         controller: 'LoginController'
-    });
+    })
     // .when('register')
+    .otherwise('/');
 }]);
