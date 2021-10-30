@@ -7,7 +7,8 @@ app.factory("userService", [ "$http", function ($http){
 
     serviceInstance.loginUser = function (userData) {
         console.log(userData);
-        return $http.post('', { data: userData });
+        // return $http.post(NODE_API_URL + '/user/get_user_by_email/' + userData.email , { data: userData });
+        return $http.post(NODE_API_URL + '/user/login' , { data: userData });
     };
 
     

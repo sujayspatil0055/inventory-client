@@ -6,7 +6,7 @@
                     <strong>Login to your account</strong>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <ng-form method="POST">
                         <div class="form-group">
                             <label class="text-muted" 
                                 for="email"
@@ -17,7 +17,7 @@
                                 id="email" 
                                 aria-describedby="emailHelp" 
                                 placeholder="Email"
-                                ng-model="loginCtrl.email"
+                                ng-model="loginCtrl.userModal.email"
                                 > 
                         </div>
                         <div class="form-group">
@@ -30,15 +30,16 @@
                                 name="password"
                                 id="password" 
                                 placeholder="Password"
-                                ng-model="loginCtrl.password"
+                                ng-model="loginCtrl.userModal.password"
                                 >
                         </div>
-                        <button type="submit" 
+                        <input type="submit" 
+                            value="Login" 
                             id="loginBtn"
                             class="btn btn-primary"
                             ng-click="loginCtrl.loginUser()"
-                            >Submit</button>
-                    </form>
+                            />
+                    </ng-form>
                 </div>
             </div>
         </div>
