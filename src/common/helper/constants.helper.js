@@ -1,1 +1,1 @@
-var NODE_API_URL = "http://localhost:3000";
+const NODE_API_URL = "http://localhost:3000";
