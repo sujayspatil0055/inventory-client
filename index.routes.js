@@ -8,6 +8,13 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: './src/login/login.html',
         controller: 'LoginController'
     })
-    // .when('register')
+    .when('/register', {
+        templateUrl: './src/register/register.html',
+        controller: 'RegisterController'
+    })
+    .when('/update-user', {
+        templateUrl: './src/update_user/updateUser.html',
+        controller: 'UpdateUserController'
+    })
     .otherwise('/');
 }]);

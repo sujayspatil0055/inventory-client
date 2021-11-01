@@ -1,12 +1,12 @@
-<div class="d-flex justify-content-center" ng-controller="RegisterController as registerCtrl">
+<div class="d-flex justify-content-center" ng-controller="UpdateUserController as updateUserCtrl">
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <strong>Register</strong>
+                    <strong>Update User</strong>
                 </div>
                 <div class="card-body">
-                    <div class="row col-12 text-danger" ng-bind="registerCtrl.errorText"></div>
+                    <div class="row col-12 text-danger" ng-bind="updateUserCtrl.errorText"></div>
                     <ng-form method="POST">
                         <div class="form-group">
                             <label class="text-muted" 
@@ -17,7 +17,7 @@
                                 name="full_name"
                                 id="full_name" 
                                 placeholder="Full Name"
-                                ng-model="registerCtrl.userModal.full_name"
+                                ng-model="updateUserCtrl.userModal.full_name"
                                 > 
                         </div>
                         <div class="form-group">
@@ -30,27 +30,15 @@
                                 id="email" 
                                 aria-describedby="emailHelp" 
                                 placeholder="Email"
-                                ng-model="registerCtrl.userModal.email"
+                                ng-model="updateUserCtrl.userModal.email"
+                                readonly
                                 > 
                         </div>
-                        <div class="form-group">
-                            <label class="text-muted" 
-                                for="password"
-                                >Password</label>
-                            <input 
-                                type="password" 
-                                class="form-control" 
-                                name="password"
-                                id="password" 
-                                placeholder="Password"
-                                ng-model="registerCtrl.userModal.password"
-                                >
-                        </div>
                         <input type="submit" 
-                            value="Register" 
-                            id="regiterBtn"
+                            value="Update User" 
+                            id="updateUserBtn"
                             class="btn btn-primary"
-                            ng-click="registerCtrl.registerUser()"
+                            ng-click="updateUserCtrl.updateUser()"
                             />
                     </ng-form>
                 </div>

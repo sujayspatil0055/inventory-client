@@ -38,7 +38,7 @@ app.controller("LoginController", ["userService", function(userService) {
             if (uc != "") {
                 console.log(uc);
             }
-
+            console.log("Login Successfull");
         }, function errorCallback(error) {
             console.log(error);
         });

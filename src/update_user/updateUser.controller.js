@@ -1,28 +1,25 @@
-app.controller("RegisterController", ['userService', function (userService) {
+app.controller("UpdateUserController", ['userService', function (userService) {
+    
     var self = this;
 
-    self.registerUser = function () {
-
+    self.updateUser = function () {
+        
         console.log(self.userModal);
 
-        var response = userService.registerUser(self.userModal);
+        var response = userService.updateUser(self.userModal);
 
         response.then(function successCallback(response) {
-            console.log(response);
+            console.log('response');
             self.errorText = "";
             let responseData = response.data;
-            // console.log(responseData);
             if (responseData.status == 'fail') {
-                console.log(responseData.message);
                 self.errorText = responseData.message;
                 return;
             }
-
-            console.log("register successfully");
-
+            console.log("update success");
         }, function errorCallback(error) {
             console.log(error);
-        })
+        });
 
     };
 
