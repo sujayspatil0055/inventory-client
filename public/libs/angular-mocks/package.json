@@ -1,33 +1,27 @@
 {
-  "_args": [
-    [
-      "angular-mocks@1.8.2",
-      "C:\\New folder\\node\\inventory-client"
-    ]
-  ],
-  "_development": true,
-  "_from": "angular-mocks@1.8.2",
+  "_from": "angular-mocks@1.8.x",
   "_id": "angular-mocks@1.8.2",
   "_inBundle": false,
   "_integrity": "sha512-I5L3P0l21HPdVsP4A4qWmENt4ePjjbkDFdAzOaM7QiibFySbt14DptPbt2IjeG4vFBr4vSLbhIz8Fk03DISl8Q==",
   "_location": "/angular-mocks",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "range",
     "registry": true,
-    "raw": "angular-mocks@1.8.2",
+    "raw": "angular-mocks@1.8.x",
     "name": "angular-mocks",
     "escapedName": "angular-mocks",
-    "rawSpec": "1.8.2",
+    "rawSpec": "1.8.x",
     "saveSpec": null,
-    "fetchSpec": "1.8.2"
+    "fetchSpec": "1.8.x"
   },
   "_requiredBy": [
     "#DEV:/"
   ],
   "_resolved": "https://registry.npmjs.org/angular-mocks/-/angular-mocks-1.8.2.tgz",
-  "_spec": "1.8.2",
-  "_where": "C:\\New folder\\node\\inventory-client",
+  "_shasum": "dc022420b86978cf317a8447c116c0be73a853bf",
+  "_spec": "angular-mocks@1.8.x",
+  "_where": "/home/jog069/working-drive/Node/inventory-client",
   "author": {
     "name": "Angular Core Team",
     "email": "angular-core+npm@google.com"
@@ -35,6 +29,8 @@
   "bugs": {
     "url": "https://github.com/angular/angular.js/issues"
   },
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "AngularJS mocks for testing",
   "homepage": "http://angularjs.org",
   "jspm": {

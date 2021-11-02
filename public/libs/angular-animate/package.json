@@ -1,32 +1,27 @@
 {
-  "_args": [
-    [
-      "angular-animate@1.8.2",
-      "C:\\New folder\\node\\inventory-client"
-    ]
-  ],
-  "_from": "angular-animate@1.8.2",
+  "_from": "angular-animate@1.8.x",
   "_id": "angular-animate@1.8.2",
   "_inBundle": false,
   "_integrity": "sha512-Jbr9+grNMs9Kj57xuBU3Ju3NOPAjS1+g2UAwwDv7su1lt0/PLDy+9zEwDiu8C8xJceoTbmBNKiWGPJGBdCQLlA==",
   "_location": "/angular-animate",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "range",
     "registry": true,
-    "raw": "angular-animate@1.8.2",
+    "raw": "angular-animate@1.8.x",
     "name": "angular-animate",
     "escapedName": "angular-animate",
-    "rawSpec": "1.8.2",
+    "rawSpec": "1.8.x",
     "saveSpec": null,
-    "fetchSpec": "1.8.2"
+    "fetchSpec": "1.8.x"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/angular-animate/-/angular-animate-1.8.2.tgz",
-  "_spec": "1.8.2",
-  "_where": "C:\\New folder\\node\\inventory-client",
+  "_shasum": "a3045e523ffb8d7fcbebd3cb68d1fdd474665ced",
+  "_spec": "angular-animate@1.8.x",
+  "_where": "/home/jog069/working-drive/Node/inventory-client",
   "author": {
     "name": "Angular Core Team",
     "email": "angular-core+npm@google.com"
@@ -34,6 +29,8 @@
   "bugs": {
     "url": "https://github.com/angular/angular.js/issues"
   },
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "AngularJS module for animations",
   "homepage": "http://angularjs.org",
   "jspm": {

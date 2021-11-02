@@ -13,7 +13,15 @@ app.factory("userService", [ "$http", function ($http){
 
     serviceInstance.registerUser = function (userData) {
         return $http.post(NODE_API_URL + '/user/register', userData)
-    }
+    };
+
+    serviceInstance.updateUser = function (userData) {
+        return $http.put(NODE_API_URL + '/user/update', userData);
+    };
+
+    serviceInstance.getAllUsers = function () {
+        return $http.get(NODE_API_URL + '/user/all');
+    };
     
     return serviceInstance;
 }]);
