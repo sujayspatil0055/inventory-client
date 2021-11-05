@@ -1,18 +1,88 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="user in users">
-            <th></th>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+<div ng-controller="UserListController as userListCtrl" ng-init="userListCtrl.getAllUsers()">
+    <div ng-switch="(userListCtrl.users != undefined) && (userListCtrl.users.length > 0) ? 'found' : ''">
+        <div ng-switch-when="found">
+            <table class="table table-sm table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in userListCtrl.users track by $index">
+                        <th>{{ $index + 1 }}</th>
+                        <td>{{ user.full_name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm pl-1 pr-1 pt-0 pb-0" 
+                                ng-click="userListCtrl.updateUserModal(user._id)"
+                                data-toggle="modal" 
+                                >Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Modal -->
+            <div class="modal fade" id="userUpdateModal" 
+                tabindex="-1" 
+                aria-labelledby="userUpdateModalLabel" 
+                aria-hidden="true"
+                >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" 
+                                id="userUpdateModalLabel"
+                                >Update User Data</h5>
+                            <button type="button" 
+                                class="close" 
+                                data-dismiss="modal" 
+                                aria-label="Close"
+                                >
+                                <span aria-hidden="true"
+                                >&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row col-12 text-danger" ng-bind="userListCtrl.errorText"></div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" 
+                                    class="form-control"
+                                    name="email" 
+                                    id="email" 
+                                    ng-model="userListCtrl.userModal.email"
+                                    readonly
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <label for="full_name">Full Name</label>
+                                <input type="text" 
+                                    class="form-control"
+                                    name="full_name" 
+                                    id="full_name" 
+                                    ng-model="userListCtrl.userModal.full_name"
+                                    >
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" 
+                                class="btn btn-primary" 
+                                ng-click="userListCtrl.updateUser()"
+                                >Save</button>
+                            <button type="button" 
+                                class="btn btn-secondary" 
+                                data-dismiss="modal"
+                                >Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-switch-default>
+            <span>Users not found</span>
+        </div>
+    </div>
+</div>

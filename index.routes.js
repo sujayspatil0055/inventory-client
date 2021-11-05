@@ -16,5 +16,9 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: './src/update_user/updateUser.html',
         controller: 'UpdateUserController'
     })
+    .when('/all-users', {
+        templateUrl: './src/all_users/users.html',
+        controller: 'UserListController'
+    })
     .otherwise('/');
 }]);
